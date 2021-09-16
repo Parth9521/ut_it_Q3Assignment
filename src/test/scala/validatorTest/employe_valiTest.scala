@@ -11,14 +11,14 @@ class employe_valiTest extends AnyFunSuite{
   val FourthEmployeeBen = Employee("Ben", "Tenison", 22,25000, "Software Consultant", "Knoldus", "Benteni?@gmail.com" )
 
 
-  test("Checking if Employee- employeeOneDavid working in Knoldus(company present in Database) is a valid Employee"){
+  test("Checking if Employee- employeeOneSteve working in Knoldus(company present in Database) is a valid Employee"){
     val expectResult = true
     val result = (new EmployeeValidator).employeeIsValid(FirstEmployeeSteve)
     assert(expectResult == result)
   }
 
 
-  test("Checking if Employee- employeeTwoLeo working in Philips(company present in Database) is a valid Employee"){
+  test("Checking if Employee- employeeTwoLeo working in Tony(company present in Database) is a valid Employee"){
 
     val expectResult = true
     val result = (new EmployeeValidator).employeeIsValid(SecondEmployeeTony)
@@ -26,14 +26,14 @@ class employe_valiTest extends AnyFunSuite{
   }
 
 
-  test("Checking if Employee- employeeThreeSimon working in company TCS(company not present in Database) is thus an invalid Employee"){
+  test("Checking if Employee- employeeThreeCurry working in company TCS(company not present in Database) is thus an invalid Employee"){
 
     val expectResult = false
     val result = (new EmployeeValidator).employeeIsValid(ThirdEmployeeStephen)
     assert(expectResult == result)
   }
 
-  test("Checking if Employee- employeeFourSam working in Knoldus(company present in Database) having invalid Email ID is thus an invalid Employee"){
+  test("Checking if Employee- employeeFourBen working in Knoldus(company present in Database) having invalid Email ID is thus an invalid Employee"){
     val expectResult = false
     val result = (new EmployeeValidator).employeeIsValid(FourthEmployeeBen)
     assert(expectResult == result)
